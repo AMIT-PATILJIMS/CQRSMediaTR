@@ -21,7 +21,6 @@
     <Folder Include="Commands\" />
     <Folder Include="Handlers\" />
     <Folder Include="Migrations\" />
-    <Folder Include="Repositories\" />
     <Folder Include="Queries\" />
   </ItemGroup>
 
