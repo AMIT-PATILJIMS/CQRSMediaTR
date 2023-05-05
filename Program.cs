@@ -1,14 +1,12 @@
 using CQRSMediaTR.Data;
 using CQRSMediaTR.Repositories;
 using System.Reflection;
-using Microsoft.AspNetCore.Hosting;
-using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 // Add services to the container.
-//builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 builder.Services.AddDbContext<DbContextClass>();
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 
